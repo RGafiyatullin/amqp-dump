@@ -93,12 +93,11 @@ async fn run() -> Result<(), ::anyhow::Error> {
         match event {
             Event::Tick(instant) => {
                 let _ = stdout.flush().await?;
-                let _ = stderr.write(format!("\ntick\n").as_bytes()).await?;
+                // let _ = stderr.write(format!("\ntick\n").as_bytes()).await?;
                 let _ = stderr.flush().await?;
             }
             Event::Delivery((_channel, delivery)) => {
                 delivery_format.write(&mut stdout, delivery).await?;
-                // let _ = stdout.write(".\n".as_bytes()).await?;
             }
         }
     }
