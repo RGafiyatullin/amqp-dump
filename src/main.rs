@@ -1,8 +1,3 @@
-#[macro_use]
-extern crate anyhow;
-
-#[macro_use]
-extern crate thiserror;
 
 use std::time::Duration;
 use std::time::Instant;
@@ -31,7 +26,7 @@ async fn run() -> Result<(), ::anyhow::Error> {
     let app_id = std::env::var("APP_ID").unwrap_or("amqp-dump".to_owned());
 
     let bind_src_exchange =
-        std::env::var("BIND_SRC_EXCHANGE").unwrap_or("v2.platform-api".to_owned());
+        std::env::var("BIND_SRC_EXCHANGE").unwrap_or("amq.topic".to_owned());
 
     let bind_routing_key = std::env::var("BIND_ROUTING_KEY").unwrap_or("#".to_owned());
 
