@@ -4,6 +4,9 @@ version = "0.1.0"
 authors = ["Roman Gafiyatullin <r.gafiyatullin@me.com>"]
 edition = "2018"
 
+description = "An util to dump deliveries from AMQP by specified exchange and routing-key"
+license = "MIT"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
